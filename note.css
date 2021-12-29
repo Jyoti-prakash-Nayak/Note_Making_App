@@ -1,0 +1,141 @@
+body{
+    height:100vh;
+}
+/* popup div */
+.addNoteBox{
+    display:none;
+    z-index:999;
+}
+.visible{
+    display:flex;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: calc(100vw - 100px);
+    height:calc(100vh - 100px);
+    background: #f8f9fa;
+    box-shadow: 0px 0px 40px rgba(0,0,0,0.322);
+    border-radius: 12px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/*Black background  */
+.blackBackground{
+    display: none;
+
+}
+.on{
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 100vh;
+    width: 100vw;
+    background: rgba(0,0,0,0.753);
+    z-index: 10;
+}
+/*close button in popup div  */
+.closeNoteBox{
+    position: relative;
+    right: 0;
+    top: 0;
+}
+
+/* Form in popup box */
+.addNoteForm{
+    width: 80%;
+    height: 80%;
+}
+.form-control{
+    width: 100%;
+}
+#content{
+    max-height: calc(100vh - 400px);
+}
+.addNote{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    border-top-left-radius:0px ;
+    border-top-right-radius:0px ;
+}
+
+/* grid for notes */
+.row{
+    width: calc(100vw - 40px);
+    margin: 20px;
+}
+
+/*individual card styles  */
+.col-sm-4{
+    text-overflow: ellipsis;
+    margin: 20px 0px;
+    transition: 0.3s ease-in-out;
+}
+.card{
+    height: fit-content;
+    text-overflow: ellipsis;
+    transition: 0.3s ease-in-out;
+}
+.card:hover{
+    box-shadow: 0px 0px 18px 3px rgba(0,0,0,0.212);
+}
+.card-text{
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.card-title{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+/* Show more box */
+.showMoreBox{
+    display: none;
+}
+.showing{
+    display: flex;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: calc(100vw - 100px);
+    height: calc(100vh - 100px);
+    background: #f8f9fa;
+    box-shadow: 0px 0px 40px rgba(0,0,0,0.322);
+    border-radius: 12px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+}
+
+/* close button for show mor box */
+.closeShowMoreBox{
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+/* styles for text inside show more box */
+.showMoreBox>h1{
+    margin: 20px;
+}
+
+.showMoreBox > p{
+   text-align: start;
+   margin: 20px;
+   height: 70%;
+   overflow-y: auto;
+}
